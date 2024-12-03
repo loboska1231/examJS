@@ -5,4 +5,4 @@ languages:
 - html
 - css
 - js
-(som bulshi on this mf list)
+[som bulshi on this mf list](https://youtu.be/klk_EdoqY48?si=GUTupc1LCZGpVKQB&t=766)
