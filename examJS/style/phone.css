@@ -1,0 +1,6 @@
+@media screen and(max-width: 480px) {
+    body{
+        background: green;
+        width: 480px;
+    }
+}

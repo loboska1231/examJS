@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background: lightblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 640px;
+    height: 480px;
+}
+section>div{
+    width: 470px;
+}
+#inputDiv{
+    margin-bottom: 20px;
+}
+#inputDiv,#outputDiv p{
+    line-height: 1;
+}
+input{
+    width: 350px;
+}
+#outputDiv>div,#inputDiv>div{
+    display: flex;
+    gap:30px;
+}
+#buttons button{
+    display: block;
+    margin-bottom: 20px;
+}
+output{
+    width: 350px;
+    height: 300px;
+    border: 1px dimgray solid;
+}
