@@ -19,10 +19,10 @@ section{
     background: white;
     width: 640px;
     height: 480px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 dimgrey;
 }
-section>div{
-    width: 470px;
-}
+
 #inputDiv{
     margin-bottom: 20px;
 }
@@ -40,8 +40,11 @@ input{
     display: block;
     margin-bottom: 20px;
 }
-output{
+#pairList{
     width: 350px;
     height: 300px;
     border: 1px dimgray solid;
+}
+.selected{
+    background: yellow;
 }
