@@ -1,5 +1,8 @@
 # javascript exam
 deadline :: 09.12.2024 12:00
+<div align="center">
+  <img src="https://www.pinterest.com/pin/cursed-plankton-meme--167618417374222066/" alt="uhhh" width="30%"  style="border-radius: 50%; padding-bottom: 20px"/>
+</div>
 ## in usage
 languages:
 - html
@@ -11,7 +14,5 @@ languages:
 Підготував для себе "плацдарм" для відтворення подій при натисяканні кнопок Add та Delete.
 ## зміни 06.12.2024
 ДОРОБИВ кнопку Add та delete. я думав це доволі складне буде але я можно було зробити по "по тупому"(по ленивому) й усе працює.
-<div>
-  <img src="https://www.pinterest.com/pin/cursed-plankton-meme--167618417374222066/" alt="Quivr-logo" width="30%"  style="border-radius: 50%; padding-bottom: 20px"/>
-</div>
+
 ## [som bulshi on this mf list](https://youtu.be/klk_EdoqY48?si=GUTupc1LCZGpVKQB&t=766)
