@@ -14,6 +14,5 @@ languages:
 <div>
   <img src="https://styles.redditmedia.com/t5_87eqyt/styles/communityIcon_lsxvs91ok4ta1.png" alt="uhhh" width="30%"  style="border-radius: 50%; padding-bottom: 20px"/>
 </div>
-its me n-ga
 
 ## [som bulshi on this mf list](https://youtu.be/klk_EdoqY48?si=GUTupc1LCZGpVKQB&t=766)
