@@ -36,6 +36,7 @@ input{
     display: flex;
     gap:30px;
 }
+
 #buttons button{
     display: block;
     margin-bottom: 20px;
@@ -44,6 +45,7 @@ input{
     width: 350px;
     height: 300px;
     border: 1px dimgray solid;
+    overflow: scroll;
 }
 .selected{
     background: yellow;
