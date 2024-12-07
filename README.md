@@ -14,6 +14,7 @@ languages:
 <div>
   <img src="https://styles.redditmedia.com/t5_87eqyt/styles/communityIcon_lsxvs91ok4ta1.png" alt="uhhh" width="30%"  style="border-radius: 50%; padding-bottom: 20px"/>
 </div>
+
 ## зміни 07.12.2024
 Зробив сортування по name та value. були деякі "преколи" з сортуванням по назві по типу 
 1. 0product = 1
