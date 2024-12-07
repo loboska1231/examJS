@@ -1,12 +1,10 @@
-let storage = JSON.parse(localStorage.getItem('pairList'))||[];
-
 let addButton = document.getElementById('add');
 let output = document.getElementById('pairList');
 let deleteButton = document.getElementById('delete');
 addButton.onclick = function (){
+    let storage = JSON.parse(localStorage.getItem('pairList'))||[];
     let input = document.getElementById('pair');
-    let str = input.value.match(/\s*\w+\s*=\s*\w+\s*/g)+'';
-    console.log(str,input.value)
+    let str = input.value.match(/\s*\w+\s*=\s*-?\w+\s*/g)+'';
     if(input.value === str){
         let temp = input.value.split('=');
         let target = document.createElement('p');
@@ -35,6 +33,7 @@ output.onclick = function(ev){
         selectedTarget.classList.toggle('selected');
 }
 window.onload = function (){
+    let storage = JSON.parse(localStorage.getItem('pairList'))||[];
     for(let el of storage){
         let p = document.createElement('p');
         p.classList.add('item');
@@ -42,8 +41,7 @@ window.onload = function (){
         output.appendChild(p);
     }
 }
-// нужно додумать как выделять объект
-deleteButton.onclick = function (ev){
+deleteButton.onclick = function (){
     if(output.hasChildNodes()){
         let items = Array.from(document.querySelectorAll('.item.selected'));
         for (const item of items.values()) {
@@ -58,4 +56,52 @@ deleteButton.onclick = function (ev){
         }
     }
     else console.log('err');
+}
+let sortByName = document.getElementById('sortByName');
+let sortByValue = document.getElementById('sortByValue');
+sortByName.onclick = function (){
+    let storage = JSON.parse(localStorage.getItem('pairList'))||[];
+    if(output.hasChildNodes() && storage){
+        output.innerHTML = '';
+        let nums = [];
+        let strs = [];
+        console.log(storage)
+        storage.forEach(t=> (isNaN(Number(t.name))? strs:nums).push(t));
+        nums.sort();
+        console.log(nums);
+        strs.sort();
+        console.log(strs)
+        storage = nums.concat(strs);
+        console.log();
+        localStorage.setItem('pairList',JSON.stringify(storage));
+        for (const t of storage) {
+            let p = document.createElement('p');
+            p.classList.add('item');
+            p.innerText=t.name+'='+t.value;
+            output.appendChild(p);
+        }
+    }
+    else console.log('err')
+}
+sortByValue.onclick = function (){
+    let storage = JSON.parse(localStorage.getItem('pairList'))||[];
+    if(output.hasChildNodes() && storage){
+        output.innerHTML = '';
+        let nums = [];
+        let strs = [];
+        storage.forEach(t=> (isNaN(Number(t.value))? strs:nums).push(t));
+        nums.sort((a,b)=>Number(a.value)-Number(b.value));
+        console.log(nums);
+        strs.sort();
+        console.log(strs)
+        storage = nums.concat(strs);
+        localStorage.setItem('pairList',JSON.stringify(storage));
+        for (const t of storage) {
+            let p = document.createElement('p');
+            p.classList.add('item');
+            p.innerText=t.name+'='+t.value;
+            output.appendChild(p);
+        }
+    }
+    else console.log('err')
 }
