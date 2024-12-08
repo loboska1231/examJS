@@ -4,6 +4,7 @@
         background: #9999db;
     }
     button{
+        padding: 0;
         width: 50px;
         height: 40px;
         font-size: 14px;

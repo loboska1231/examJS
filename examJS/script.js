@@ -4,13 +4,13 @@ let deleteButton = document.getElementById('delete');
 addButton.onclick = function (){
     let storage = JSON.parse(localStorage.getItem('pairList'))||[];
     let input = document.getElementById('pair');
-    let str = input.value.match(/\s*\w+\s*=\s*-?\w+\s*/g)+'';
+    let str = input.value.match(/\s*[a-zA-Z0-9\s*]+\s*=\s*-?[a-zA-Z0-9\s]+\s*/g)+'';
     if(input.value === str){
         let temp = input.value.split('=');
         let target = document.createElement('p');
         let obj = {
-            name : temp[0],
-            value : temp[1]
+            name : temp[0].replaceAll(' ',''),
+            value : temp[1].replaceAll(' ','')
         };
         if(storage.find(el=>(el.name === obj.name))) {
             input.placeholder = 'ERROR';
