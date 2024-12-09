@@ -65,14 +65,10 @@ sortByName.onclick = function (){
         output.innerHTML = '';
         let nums = [];
         let strs = [];
-        console.log(storage)
         storage.forEach(t=> (isNaN(Number(t.name))? strs:nums).push(t));
         nums.sort();
-        console.log(nums);
         strs.sort();
-        console.log(strs)
         storage = nums.concat(strs);
-        console.log();
         localStorage.setItem('pairList',JSON.stringify(storage));
         for (const t of storage) {
             let p = document.createElement('p');
@@ -91,9 +87,7 @@ sortByValue.onclick = function (){
         let strs = [];
         storage.forEach(t=> (isNaN(Number(t.value))? strs:nums).push(t));
         nums.sort((a,b)=>Number(a.value)-Number(b.value));
-        console.log(nums);
         strs.sort();
-        console.log(strs)
         storage = nums.concat(strs);
         localStorage.setItem('pairList',JSON.stringify(storage));
         for (const t of storage) {
